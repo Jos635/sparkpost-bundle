@@ -22,6 +22,7 @@ class Configuration implements ConfigurationInterface
         $rootNode
             ->children()
             ->scalarNode('api_token')->defaultNull()->end()
+            ->scalarNode('timeout')->defaultValue(10)->end()
             ->end()
         ;
         return $treeBuilder;
